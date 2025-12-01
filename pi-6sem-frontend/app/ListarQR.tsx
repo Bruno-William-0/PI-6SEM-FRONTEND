@@ -7,9 +7,10 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
-import { CameraView, useCameraPermissions } from "expo-camera";
+import { CameraView, useCameraPermissions } from "expo-camera";//Para avaliação: Integração de câmera para leitura de qr code
 import axios from "../services/axios";
 
+//Integração de câmera para leitura de qr code
 export default function QrScannerScreen() {
   const [permission, requestPermission] = useCameraPermissions();
 
@@ -91,7 +92,6 @@ export default function QrScannerScreen() {
         </View>
       )}
 
-      {/* BOTÃO DE FECHAR SCANNER */}
       <TouchableOpacity
         style={styles.closeScannerButton}
         onPress={() => setScannerOpen(false)}
@@ -99,7 +99,7 @@ export default function QrScannerScreen() {
         <Text style={styles.closeScannerText}>Fechar</Text>
       </TouchableOpacity>
 
-      {/* MODAL */}
+
       <Modal visible={modalVisible} transparent animationType="slide">
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
@@ -138,9 +138,7 @@ export default function QrScannerScreen() {
   );
 }
 
-// ------------------------------------------------
-// ESTILOS
-// ------------------------------------------------
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
