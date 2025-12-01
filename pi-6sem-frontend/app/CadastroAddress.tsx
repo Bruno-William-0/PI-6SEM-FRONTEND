@@ -45,11 +45,11 @@ export default function AddressCreateScreen() {
     setLoading(true);
     try {
       if (isUpdate) {
-        const res = await axios.put(`/address/${id}`, obj);
+        const res = await axios.put(`/address/update/${id}`, obj);
         alert("Endereço atualizado com sucesso!");
         console.log(res.data);
       } else {
-        const res = await axios.post("/address", obj);
+        const res = await axios.post("/address/save", obj);
         alert("Endereço cadastrado com sucesso!");
         console.log(res.data);
       }
