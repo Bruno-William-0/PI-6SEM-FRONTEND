@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
-export default function Menu() {
+export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Menu Principal</Text>
