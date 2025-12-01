@@ -19,7 +19,6 @@ export default function HostCreateScreen() {
     };
 
     console.log("Dados enviados:", data);
-    // aqui você chama seu backend via fetch/axios
   };
 
   return (
